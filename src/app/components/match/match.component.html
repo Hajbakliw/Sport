@@ -1,0 +1,35 @@
+
+<table class="table table-striped"style="text-align: center;">
+    <thead>
+      <tr >
+        <th scope="col">Id</th>
+        <th scope="col">Team1</th>
+        <th scope="col">Team2</th>
+        <th scope="col">Score1</th>
+        <th scope="col">Score2</th>
+        <th scope="col">Logo1</th>
+        <th scope="col">Logo2</th>
+        <th scope="col" >Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ='let m of match'> 
+        <td>{{m.id}}</td>
+        <td>{{m.team1}}</td>
+        <td>{{m.team2}}</td>
+        <td>{{m.score1}}</td>
+        <td>{{m.score2}}</td>
+        <td><img [src]="m.logo1" alt="" style="width: 50px; height: 50px;"></td>
+        <td><img [src]="m.logo2"alt="" style="width: 50px; height: 50px;"> </td>
+        <td> 
+            <button type="button" class="btn btn-primary" (click)="goToMatch(m.id)">Display</button>
+            <button type="button" class="btn btn-secondary"(click)="editMatch(m.id)">Edit</button>
+            <button type="button" class="btn btn-success"(click)="deleteMatch(m.id)">Deleate</button>
+        </td>
+        
+      </tr> 
+      
+    </tbody>
+ </table>  
+ 

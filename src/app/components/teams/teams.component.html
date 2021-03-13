@@ -1,0 +1,29 @@
+<table class="table table-striped"style="text-align: center;">
+    <thead>
+      <tr style="text-align: center;">
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Fondation</th>
+        <th scope="col"> Stadium</th>
+        <th scope="col">Country</th>
+        <th scope="col">Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ='let t of teams'> 
+        <td>{{t.id}}</td>
+        <td>{{t.name}}</td>
+        <td>{{t.fondation}}</td>
+        <td>{{t.stadium}}</td>
+        <td>{{t.country}}</td>
+        <td> 
+            <button type="button" class="btn btn-primary" (click)="goToTeam(t.id)" >Display</button>
+            <button type="button" class="btn btn-secondary">Edit</button>
+            <button type="button" class="btn btn-success">Deleate</button>
+        </td>
+        
+      </tr> 
+      
+    </tbody>
+ </table>   
